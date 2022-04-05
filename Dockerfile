@@ -1,5 +1,6 @@
 # Specify a base image
-FROM node:14-alpine
+#FROM node:14-alpine
+FROM public.ecr.aws/r8a9v2p6/node-alpine:latest
 
 WORKDIR /usr/app
 
@@ -9,4 +10,4 @@ RUN npm install
 COPY ./ ./
 
 # Default command
-#CMD ["npm", "start"]
+CMD ["npm", "start"]
